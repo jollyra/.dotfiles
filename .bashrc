@@ -24,3 +24,9 @@ alias gc="git commit -av"
 alias gdc="git diff --cached"
 alias gll="git log -p"  # Log with full diff patch
 alias gsp="git stash; git pull; git stash apply"
+
+# Websites
+alias c='open /Applications/Google\ Chrome.app'
+
+# Convenience
+alias vimrc='vi $HOME/.vimrc'
