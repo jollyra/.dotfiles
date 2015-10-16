@@ -44,7 +44,7 @@ set autoindent
 set cursorline
 set number
 syntax on
-autocmd BufWritePre * :%s/\s\+$//e "Strip trailing space on save
+" autocmd BufWritePre * :%s/\s\+$//e "Strip trailing space on save
 
 set noswapfile                  " Don't use swapfile
 set nobackup                    " Don't create annoying backup files
@@ -77,29 +77,30 @@ set smartcase
 set incsearch
 set hlsearch
 
+"Explore file like a sir
+"=======================
+map <leader>e :Lexplore<CR>
+
 "Buffer Helpers
 "===========
-map <leader><left> :bp<cr>
-map <leader><right> :bn<cr>
+map <leader>b :buffers<CR>:buffer<space>
+map <leader>l :bnext<CR>
+map <leader>h :bprev<CR>
 
 "Vmap for maintain Visual Mode after shifting > and <
 "====================================================
 vmap < <gv
 vmap > >gv
 
-"Tab Helpers
-"===========
-map <C-t><up> :tabr<cr>
-map <C-t><down> :tabl<cr>
-map <C-t><left> :tabp<cr>
-map <C-t><right> :tabn<cr>
-map <C-t>t :tabnew
-
 "Git
 "===
 noremap <Leader>ga :!git add .<CR>
 noremap <Leader>gc :!git commit -v<CR>
 noremap <Leader>gp :!git push<CR>
+
+"Git Gutter
+"==========
+let g:gitgutter_map_keys = 0 " Disable all key maps
 
 "Vim-airline
 "===========
