@@ -6,7 +6,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-<<<<<<< HEAD
 Plugin 'VundleVim/Vundle.vim'
 
 "Plugins
