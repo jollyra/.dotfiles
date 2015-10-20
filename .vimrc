@@ -52,6 +52,7 @@ set splitright                  " Split vertical windows right to the current wi
 set splitbelow                  " Split horizontal windows below to the current windows
 set encoding=utf-8              " Set default encoding to UTF-8
 set wildmenu
+set hidden
 
 "Escaping
 "========
