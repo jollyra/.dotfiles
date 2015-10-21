@@ -7,6 +7,8 @@ alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
 alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
 alias nodepca='NODE_ENV=pca NODE_CONFIG_DIR=./config-local node'
 alias nodepus='NODE_ENV=pus NODE_CONFIG_DIR=./config-local node'
+# Debug energy reports with html-inspector
+alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload energyreports.js'
 
 # Always show Grunt stack traces.
 alias grunt='grunt --stack'
@@ -30,3 +32,9 @@ alias c='open /Applications/Google\ Chrome.app'
 
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
+
+# Silver Searcher aliases
+agl () { ag --color --after=4 "$@" | less -SRi; }
+ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
+agq () { ag --color --before=2 --after=4 --literal "$@" | less -SRi; }
+agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
