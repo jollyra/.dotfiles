@@ -36,5 +36,5 @@ alias vimrc='vi $HOME/.vimrc'
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
 ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
-agq () { ag --color --before=2 --after=4 --literal "$@" | less -SRi; }
+agq () { ag --color --before=2 --after=4 --literal --ignore=*.csv "$@" | less -SRi; }
 agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
