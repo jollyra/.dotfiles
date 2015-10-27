@@ -12,16 +12,11 @@ Plugin 'VundleVim/Vundle.vim'
 "========
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'gcmt/breeze.vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'rking/ag.vim'
 Plugin 'tomasr/molokai'
 Plugin 'kchmck/vim-coffee-script'
 
@@ -43,7 +38,6 @@ set autoindent
 set cursorline
 set number
 syntax on
-" autocmd BufWritePre * :%s/\s\+$//e "Strip trailing space on save
 
 set noswapfile                  " Don't use swapfile
 set nobackup                    " Don't create annoying backup files
@@ -91,12 +85,6 @@ map <leader>h :bprev<CR>
 "====================================================
 vmap < <gv
 vmap > >gv
-
-"Git
-"===
-noremap <Leader>ga :!git add .<CR>
-noremap <Leader>gc :!git commit -v<CR>
-noremap <Leader>gp :!git push<CR>
 
 "Git Gutter
 "==========
