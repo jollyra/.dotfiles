@@ -86,6 +86,12 @@ map <leader>h :bprev<CR>
 vmap < <gv
 vmap > >gv
 
+"Grunt commands
+"==============
+noremap <Leader>grd :!grunt dist<CR>
+noremap <Leader>grl :!grunt lint<CR>
+noremap <Leader>grt :!grunt test<CR>
+
 "Git Gutter
 "==========
 let g:gitgutter_map_keys = 0 " Disable all key maps
