@@ -19,6 +19,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdtree'
+Plugin 'rking/ag'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,7 +72,7 @@ set hlsearch
 
 "Explore file like a sir
 "=======================
-map <leader>e :Lexplore<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 "Buffer Helpers
 "===========
