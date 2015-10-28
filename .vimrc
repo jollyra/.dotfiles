@@ -29,12 +29,12 @@ filetype plugin indent on
 "==============
 let mapleader="\<space>"
 set noerrorbells
-set tabstop=4 shiftwidth=4 expandtab
+set autoindent
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set showmode
 set backspace=indent,eol,start
 set showcmd
 set autoread " Reload on change
-set autoindent
 set cursorline
 set number
 syntax on
@@ -45,6 +45,7 @@ set splitright                  " Split vertical windows right to the current wi
 set splitbelow                  " Split horizontal windows below to the current windows
 set encoding=utf-8              " Set default encoding to UTF-8
 set wildmenu
+set hidden
 
 "Escaping
 "========
