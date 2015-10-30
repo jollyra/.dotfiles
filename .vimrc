@@ -92,6 +92,16 @@ noremap <Leader>grd :!grunt dist<CR>
 noremap <Leader>grl :!grunt lint<CR>
 noremap <Leader>grt :!grunt test<CR>
 
+"Git
+"===
+noremap <Leader>ga :!git add -u<CR>
+noremap <Leader>gap :!git add --patch<CR>
+noremap <Leader>gc :!git commit -v<CR>
+noremap <Leader>gp :!git push<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+
 "Git Gutter
 "==========
 let g:gitgutter_map_keys = 0 " Disable all key maps
