@@ -27,6 +27,11 @@ alias gdc="git diff --cached"
 alias gll="git log -p"  # Log with full diff patch
 alias gsp="git stash; git pull; git stash apply"
 
+# Grunt aliases
+alias grd="grunt dist"
+alias grl="grunt list"
+alias grt="grunt test"
+
 # Websites
 alias c='open /Applications/Google\ Chrome.app'
 
