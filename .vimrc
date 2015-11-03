@@ -88,7 +88,7 @@ vmap > >gv
 
 "Grunt commands
 "==============
-noremap <Leader>grd :!grunt dist<CR>
+noremap <Leader>grd :!grunt dist<CR><CR>
 noremap <Leader>grl :!grunt lint<CR>
 noremap <Leader>grt :!grunt test<CR>
 
