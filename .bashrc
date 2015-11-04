@@ -29,7 +29,7 @@ alias gsp="git stash; git pull; git stash apply"
 
 # Grunt aliases
 alias grd="grunt dist"
-alias grl="grunt list"
+alias grl="grunt lint"
 alias grt="grunt test"
 
 # Websites
