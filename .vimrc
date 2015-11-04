@@ -20,7 +20,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/nerdtree'
-Plugin 'rking/ag'
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
