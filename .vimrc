@@ -19,8 +19,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
+Plugin 'raichoo/haskell-vim'  " Haskell syntax
 
 call vundle#end()
 filetype plugin indent on
@@ -73,7 +73,7 @@ set hlsearch
 
 "Explore file like a sir
 "=======================
-map <leader>e :NERDTreeToggle<CR>
+map <leader>e :Lexplore<CR>
 
 "Buffer Helpers
 "===========
@@ -101,6 +101,13 @@ noremap <Leader>gp :!git push<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
+
+"Autoreload .vimrc if it changes
+"===============================
+augroup myvimrchooks
+	au!
+	autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END
 
 "Git Gutter
 "==========
