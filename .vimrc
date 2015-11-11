@@ -47,6 +47,8 @@ set encoding=utf-8              " Set default encoding to UTF-8
 set wildmenu
 set hidden
 
+autocmd FileType haskell setl tabstop=8 softtabstop=8 shiftwidth=8 expandtab
+
 "Escaping
 "========
 imap jk <Esc>
@@ -101,13 +103,6 @@ noremap <Leader>gp :!git push<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
-
-"Autoreload .vimrc if it changes
-"===============================
-augroup myvimrchooks
-	au!
-	autocmd bufwritepost .vimrc source ~/.vimrc
-augroup END
 
 "Git Gutter
 "==========
