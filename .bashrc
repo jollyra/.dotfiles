@@ -8,7 +8,7 @@ alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
 alias nodepca='NODE_ENV=pca NODE_CONFIG_DIR=./config-local node'
 alias nodepus='NODE_ENV=pus NODE_CONFIG_DIR=./config-local node'
 # Debug energy reports with html-inspector
-alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload energyreports.js'
+alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload '
 
 # Always show Grunt stack traces.
 alias grunt='grunt --stack'
