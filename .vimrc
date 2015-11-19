@@ -47,7 +47,7 @@ set encoding=utf-8              " Set default encoding to UTF-8
 set wildmenu
 set hidden
 
-autocmd FileType haskell setl tabstop=8 softtabstop=8 shiftwidth=8 expandtab
+autocmd FileType haskell setl tabstop=8 softtabstop=4 shiftwidth=4 expandtab shiftround
 
 "Escaping
 "========
