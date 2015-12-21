@@ -12,18 +12,15 @@ Plugin 'VundleVim/Vundle.vim'
 "========
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'gcmt/breeze.vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'rking/ag.vim'
 Plugin 'tomasr/molokai'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'rking/ag.vim'
+Plugin 'raichoo/haskell-vim'  " Haskell syntax
 
 call vundle#end()
 filetype plugin indent on
@@ -32,19 +29,15 @@ filetype plugin indent on
 "==============
 let mapleader="\<space>"
 set noerrorbells
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab
+set autoindent
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set showmode
 set backspace=indent,eol,start
 set showcmd
 set autoread " Reload on change
-set autoindent
 set cursorline
 set number
 syntax on
-" autocmd BufWritePre * :%s/\s\+$//e "Strip trailing space on save
 
 set noswapfile                  " Don't use swapfile
 set nobackup                    " Don't create annoying backup files
@@ -52,6 +45,9 @@ set splitright                  " Split vertical windows right to the current wi
 set splitbelow                  " Split horizontal windows below to the current windows
 set encoding=utf-8              " Set default encoding to UTF-8
 set wildmenu
+set hidden
+
+autocmd FileType haskell setl tabstop=8 softtabstop=4 shiftwidth=4 expandtab shiftround
 
 "Escaping
 "========
@@ -92,11 +88,21 @@ map <leader>h :bprev<CR>
 vmap < <gv
 vmap > >gv
 
+"Grunt commands
+"==============
+noremap <Leader>grd :!grunt dist<CR><CR>
+noremap <Leader>grl :!grunt lint<CR>
+noremap <Leader>grt :!grunt test<CR>
+
 "Git
 "===
-noremap <Leader>ga :!git add .<CR>
+noremap <Leader>ga :!git add -u<CR>
+noremap <Leader>gap :!git add --patch<CR>
 noremap <Leader>gc :!git commit -v<CR>
 noremap <Leader>gp :!git push<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
 
 "Git Gutter
 "==========
