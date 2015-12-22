@@ -22,10 +22,12 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
 # Git aliases
 alias gs="git status --branch"
 alias ga="git add -u; git status"
+alias gad="git add"
+alias gp="git push"
 alias gc="git commit -av"
 alias gdc="git diff --cached"
 alias gll="git log -p"  # Log with full diff patch
-alias glo="git log --oneline"
+alias glol="git log --oneline"
 alias gsp="git stash; git pull; git stash apply"
 
 # Grunt aliases
@@ -39,6 +41,7 @@ alias c='open /Applications/Google\ Chrome.app'
 
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
+alias bashrc='vi $HOME/.bash_profile'
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
