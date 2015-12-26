@@ -119,8 +119,3 @@ let g:Powerline_symbols = 'fancy'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 set ttimeoutlen=50
-
-"JSHint
-"======
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_javascript_jshint_conf = '~/.jshintrc'
