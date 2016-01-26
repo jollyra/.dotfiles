@@ -22,9 +22,9 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
 # Git aliases
 alias gs="git status --branch"
 alias ga="git add -u; git status"
-alias gad="git add"
+alias gap="git add -u; git status"
 alias gp="git push"
-alias gc="git commit -av"
+alias gc="git commit -v"
 alias gdc="git diff --cached"
 alias gll="git log -p"  # Log with full diff patch
 alias glol="git log --oneline"
@@ -36,9 +36,6 @@ alias grl="grunt lint"
 alias grt="grunt test"
 alias gtg="grunt test:unit --grep "
 
-# Websites
-alias c='open /Applications/Google\ Chrome.app'
-
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
 alias bashrc='vi $HOME/.bash_profile'
@@ -48,3 +45,6 @@ agl () { ag --color --after=4 "$@" | less -SRi; }
 ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
 agq () { ag --color --before=2 --after=4 --literal --ignore=*.csv "$@" | less -SRi; }
 agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
+
+export NVM_DIR="/Users/nigel.rahkola/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
