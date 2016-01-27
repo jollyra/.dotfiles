@@ -73,6 +73,16 @@ set smartcase
 set incsearch
 set hlsearch
 
+"Change TLD between biz and com
+"=======================
+map <leader>com :%s/\.biz/\.com/g<CR>
+map <leader>biz :%s/\.com/\.biz/g<CR>
+
+"Change environment between ca and us
+"=======================
+map <leader>us :%s/ca\./us\./g<CR>
+map <leader>ca :%s/us\./ca\./g<CR>
+
 "Explore file like a sir
 "=======================
 map <leader>e :Lexplore<CR>
