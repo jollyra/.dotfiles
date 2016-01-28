@@ -21,11 +21,13 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
 
 # Git aliases
 alias gs="git status --branch"
+alias gadd="git add "
 alias ga="git add -u; git status"
-alias gap="git add -u; git status"
+alias gap="git add --patch; git status"
 alias gp="git push"
 alias gc="git commit -v"
 alias gdc="git diff --cached"
+alias gdc="git diff"
 alias gll="git log -p"  # Log with full diff patch
 alias glol="git log --oneline"
 alias gsp="git stash; git pull; git stash apply"
