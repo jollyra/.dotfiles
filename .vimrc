@@ -18,7 +18,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'rking/ag.vim'
 Plugin 'raichoo/haskell-vim'  " Haskell syntax
 
