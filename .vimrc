@@ -14,7 +14,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
@@ -71,16 +70,6 @@ set smartcase
 set incsearch
 set hlsearch
 
-"Change TLD between biz and com
-"=======================
-map <leader>com :%s/\.biz/\.com/g<CR>
-map <leader>biz :%s/\.com/\.biz/g<CR>
-
-"Change environment between ca and us
-"=======================
-map <leader>us :%s/ca\./us\./g<CR>
-map <leader>ca :%s/us\./ca\./g<CR>
-
 "Explore file like a sir
 "=======================
 map <leader>e :Lexplore<CR>
@@ -112,9 +101,15 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 
-"Git Gutter
-"==========
-let g:gitgutter_map_keys = 0 " Disable all key maps
+"Change TLD between biz and com
+"=======================
+map <leader>com :%s/\.biz/\.com/g<CR>
+map <leader>biz :%s/\.com/\.biz/g<CR>
+
+"Change environment between ca and us
+"=======================
+map <leader>us :%s/ca\./us\./g<CR>
+map <leader>ca :%s/us\./ca\./g<CR>
 
 "Vim-airline
 "===========
