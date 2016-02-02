@@ -19,7 +19,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
-Plugin 'raichoo/haskell-vim'  " Haskell syntax
 
 call vundle#end()
 filetype plugin indent on
