@@ -42,6 +42,7 @@ alias gtg="grunt test:unit --grep "
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
 alias bashrc='vi $HOME/.bash_profile'
+alias ll='ls -al'
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
