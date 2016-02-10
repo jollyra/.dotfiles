@@ -69,6 +69,8 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+set gdefault  " Search globally by default`
+
 
 "Explore file like a sir
 "=======================
