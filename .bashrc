@@ -2,17 +2,6 @@ export PATH=~/.npm/bin:./node_modules/.bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
 export PATH=/usr/local/bin:$PATH
 
-# Testing scripts locally in different environments.
-alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
-alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
-alias nodepca='NODE_ENV=pca NODE_CONFIG_DIR=./config-local node'
-alias nodepus='NODE_ENV=pus NODE_CONFIG_DIR=./config-local node'
-# Debug energy reports with html-inspector
-alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload '
-
-# Always show Grunt stack traces.
-alias grunt='grunt --stack'
-
 # Git branch in prompt.
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -25,7 +14,6 @@ alias gadd="git add "
 alias ga="git add -u; git status"
 alias gap="git add --patch; git status"
 alias gp="git push"
-alias gpp="grunt lint && git push"  # git push for work
 alias gc="git commit -v"
 alias gdc="git diff --cached"
 alias gd="git diff"
@@ -33,16 +21,29 @@ alias gll="git log -p"  # Log with full diff patch
 alias glol="git log --oneline"
 alias gsp="git stash; git pull; git stash apply"
 
-# Grunt aliases
+# Work
+# ====
+alias gpp="grunt lint && git push"
 alias grd="grunt dist"
 alias grl="grunt lint"
 alias grt="grunt test"
 alias gtg="grunt test:unit --grep "
+alias grunt='grunt --stack'  # Always show Grunt stack traces.
+alias tca='ssh server3'
+# Testing scripts locally in different environments.
+alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
+alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
+alias nodepca='NODE_ENV=pca NODE_CONFIG_DIR=./config-local node'
+alias nodepus='NODE_ENV=pus NODE_CONFIG_DIR=./config-local node'
+# Debug energy reports with html-inspector
+alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload '
 
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
 alias bashrc='vi $HOME/.bash_profile'
 alias ll='ls -al'
+alias ..='cd ..'
+alias ....='cd ../..'
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
