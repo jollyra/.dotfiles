@@ -124,3 +124,10 @@ let g:Powerline_symbols = 'fancy'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 set ttimeoutlen=50
+
+"ctrlP
+"=====
+let g:ctrlp_lazy_update = 1  "Don't update match window until typing stops
+let g:ctrlp_clear_cache_on_exit = 1  "Enable cross-session caching by not deleting cache files
+let g:ctrlp_mruf_relative = 0  "Only show mru files in the CWD
+let g:ctrlp_custom_ignore = 'node_modules/.*'
