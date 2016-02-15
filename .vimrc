@@ -128,4 +128,4 @@ set ttimeoutlen=50
 let g:ctrlp_lazy_update = 1  "Don't update match window until typing stops
 let g:ctrlp_clear_cache_on_exit = 1  "Enable cross-session caching by not deleting cache files
 let g:ctrlp_mruf_relative = 0  "Only show mru files in the CWD
-let g:ctrlp_custom_ignore = 'node_modules/.*'
+let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git'
