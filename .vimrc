@@ -49,7 +49,6 @@ autocmd FileType haskell setl tabstop=8 softtabstop=4 shiftwidth=4 expandtab shi
 "Escaping
 "========
 imap jk <Esc>
-imap kj <Esc>
 
 "Show nice tabs
 "===============
