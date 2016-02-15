@@ -87,6 +87,10 @@ map <leader>h :bprev<CR>
 vmap < <gv
 vmap > >gv
 
+"Paste at the end of the line
+"============================
+noremap ap $p
+
 "Grunt commands
 "==============
 noremap <Leader>grd :!grunt dist<CR><CR>
