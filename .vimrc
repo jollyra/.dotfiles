@@ -95,11 +95,6 @@ noremap <Leader>grt :!grunt test<CR>
 
 "Git
 "===
-noremap <Leader>ga :!git add -u<CR>
-noremap <Leader>gap :!git add --patch<CR>
-noremap <Leader>gc :!git commit -v<CR>
-noremap <Leader>gp :!git push<CR>
-noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 
