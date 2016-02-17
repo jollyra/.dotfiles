@@ -74,9 +74,6 @@ map <leader>h :bprev<CR>
 vmap < <gv
 vmap > >gv
 
-"Paste at the end of the line
-noremap ap $p
-
 "Enter saves file
 nnoremap <cr> :w<cr>
 
