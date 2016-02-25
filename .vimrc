@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VunleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
@@ -14,6 +14,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -110,3 +111,6 @@ let g:ctrlp_lazy_update = 1  "Don't update match window until typing stops
 let g:ctrlp_clear_cache_on_exit = 1  "Enable cross-session caching by not deleting cache files
 let g:ctrlp_mruf_relative = 0  "Only show mru files in the CWD
 let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git'
+
+"Dash
+nmap <silent> <leader>d <Plug>DashSearch
