@@ -43,6 +43,9 @@ set hidden
 
 autocmd FileType haskell setl tabstop=8 softtabstop=4 shiftwidth=4 expandtab shiftround
 
+"Disable Ex mode
+nnoremap Q <Nop>
+
 "Escaping
 imap jk <Esc>
 
