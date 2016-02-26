@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'mattn/sonictemplate-vim.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -117,3 +118,6 @@ let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git'
 
 "Dash
 nmap <silent> <leader>d <Plug>DashSearch
+
+"Sonictemplate custom template dir
+let g:sonictemplate_vim_template_dir = '$HOME/repos/code-templates'
