@@ -22,7 +22,6 @@ alias glol="git log --oneline"
 alias gsp="git stash; git pull; git stash apply"
 
 # Work
-# ====
 alias gpp="grunt lint && git push"
 alias grd="grunt dist"
 alias grl="grunt lint"
@@ -35,6 +34,7 @@ alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
 alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
 alias nodepca='NODE_ENV=pca NODE_CONFIG_DIR=./config-local node'
 alias nodepus='NODE_ENV=pus NODE_CONFIG_DIR=./config-local node'
+
 # Debug energy reports with html-inspector
 alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload '
 
@@ -44,6 +44,9 @@ alias bashrc='vi $HOME/.bash_profile'
 alias ll='ls -al'
 alias ..='cd ..'
 alias ....='cd ../..'
+
+# Commit dotfiles changes from anywhere
+alias gcdot="git -C $HOME/dotfiles/ commit -av"
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
