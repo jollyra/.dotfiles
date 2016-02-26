@@ -46,7 +46,7 @@ alias ..='cd ..'
 alias ....='cd ../..'
 
 # Commit dotfiles changes from anywhere
-alias gcdot="git -C $HOME/dotfiles/ commit -av"
+alias gcdot="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
