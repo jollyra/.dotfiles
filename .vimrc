@@ -95,6 +95,9 @@ map <leader>biz :%s/\.com/\.biz/g<CR>
 map <leader>us :%s/ca\./us\./g<CR>
 map <leader>ca :%s/us\./ca\./g<CR>
 
+"Search for current word in Silver Searcher
+nnoremap <leader>K :Ag<cr>
+
 "Vim-airline
 let g:airline_theme='powerlineish'
 set laststatus=2
