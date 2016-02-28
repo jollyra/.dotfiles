@@ -16,6 +16,7 @@ Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on
