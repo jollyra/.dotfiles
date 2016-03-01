@@ -17,6 +17,7 @@ Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -125,3 +126,6 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 "Sonictemplate custom template dir
 let g:sonictemplate_vim_template_dir = '$HOME/repos/code-templates'
+
+"Ensure EditorConfig works well with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
