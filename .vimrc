@@ -26,7 +26,7 @@ filetype plugin indent on
 let mapleader="\<space>"
 set noerrorbells
 set autoindent
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set showmode
 set backspace=indent,eol,start
 set showcmd
