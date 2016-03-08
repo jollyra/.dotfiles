@@ -8,7 +8,8 @@ call vundle#begin()
 Plugin 'VunleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
@@ -16,7 +17,6 @@ Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
@@ -119,7 +119,7 @@ set ttimeoutlen=50
 let g:ctrlp_lazy_update = 1  "Don't update match window until typing stops
 let g:ctrlp_clear_cache_on_exit = 1  "Enable cross-session caching by not deleting cache files
 let g:ctrlp_mruf_relative = 0  "Only show mru files in the CWD
-let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git\|venv'
 
 "Dash
 nmap <silent> <leader>d <Plug>DashSearch
