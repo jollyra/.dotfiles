@@ -18,6 +18,7 @@ Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,7 +71,7 @@ set gdefault  " Search globally by default`
 
 
 "Explore file like a sir
-map <leader>e :Lexplore<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 "Buffer Helpers
 map <leader>b :buffers<CR>:buffer<space>
