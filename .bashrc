@@ -20,6 +20,7 @@ alias gd="git diff"
 alias gll="git log -p"  # Log with full diff patch
 alias glol="git log --oneline"
 alias gsp="git stash; git pull; git stash apply"
+alias glog="git log --follow -p --" # supply filename
 
 # Work
 alias gpp="grunt lint && git push"
