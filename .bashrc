@@ -27,8 +27,9 @@ alias grunt='grunt --stack'  # Always show Grunt stack traces.
 alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
 alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
 
-# Debug energy reports with html-inspector
-alias nodebug='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --no-preload '
+# Debug energy reports with node-inspector
+alias debugdus='NODE_ENV=pca NODE_CONFIG_DIR=./config-local/ node-debug --hidden node_modules/ --hidden bower_components/ --hidden test/ --no-preload energyreports.js'
+alias debugdca='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --hidden node_modules/ --hidden bower_components/ --hidden test/ --no-preload energyreports.js'
 
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
@@ -38,7 +39,7 @@ alias ..='cd ..'
 alias ....='cd ../..'
 
 # Commit dotfiles changes from anywhere
-alias gcdot="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
+alias dotfilesup="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
 
 # Silver Searcher aliases
 agl () { ag --color --after=4 "$@" | less -SRi; }
