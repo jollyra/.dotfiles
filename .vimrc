@@ -120,6 +120,10 @@ let g:ctrlp_lazy_update = 1         "don't update match window until typing stop
 let g:ctrlp_clear_cache_on_exit = 1 "enable cross-session caching by not deleting cache files
 let g:ctrlp_mruf_relative = 0       "only show mru files in the CWD
 let g:ctrlp_custom_ignore = 'logs\|target\|node_modules\|DS_Store\|git\|venv\|bower_components'
+set wildignore+=*.css               " css files are all generated from less files
+let g:ctrlp_working_path_mode = 'wr' " now I can search for files from dev dir instead of project root
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25'
+let g:ctrlp_max_files = 100000  " larger than default so I can seach from dev dir
 
 "Dash
 nmap <silent> <leader>d <Plug>DashSearch
