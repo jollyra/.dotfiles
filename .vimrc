@@ -86,6 +86,8 @@ vmap > >gv
 " Enter saves file
 nnoremap <cr> :w<cr>
 
+nnoremap Y y$
+
 " Grunt commands
 noremap <Leader>grd :!grunt dist<CR><CR>
 noremap <Leader>grl :!grunt lint<CR>
@@ -133,3 +135,5 @@ let g:sonictemplate_vim_template_dir = '$HOME/repos/code-templates'
 
 "Ensure EditorConfig works well with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+
