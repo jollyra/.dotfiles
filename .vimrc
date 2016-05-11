@@ -73,6 +73,7 @@ let g:rehash256 = 1
 
 " Explore file like a sir
 map <leader>e :NERDTreeToggle<CR>
+let NERDTreeWinSize=50
 
 " Buffer Helpers
 map <leader>b :buffers<CR>:buffer<space>
