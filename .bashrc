@@ -7,11 +7,12 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
-export PS1="\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
+export PS1="\u:\W\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
 
 # Git aliases
 alias gs="git status --branch"
 alias ga="git add -u; git status"
+alias gad="git add"
 alias gc="git commit -v"
 alias gll="git log -p"  # Log with full diff patch
 alias gsp="git stash; git pull; git stash apply"
