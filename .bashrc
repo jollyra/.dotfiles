@@ -16,21 +16,6 @@ alias gll="git log -p"  # Log with full diff patch
 alias gsp="git stash; git pull; git stash apply"
 alias gflogs="git log --follow --oneline --" # supply filename
 
-# Work
-alias gpp="grunt lint && git push"
-alias grd="grunt dist"
-alias grl="grunt lint"
-alias grt="grunt test"
-alias grunt='grunt --stack'  # Always show Grunt stack traces.
-
-# Testing scripts locally in different environments.
-alias nodedca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
-alias nodedus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
-
-# Debug energy reports with node-inspector
-alias debugdus='NODE_ENV=pca NODE_CONFIG_DIR=./config-local/ node-debug --hidden node_modules/ --hidden bower_components/ --hidden test/ --no-preload energyreports.js'
-alias debugdca='NODE_ENV=dus NODE_CONFIG_DIR=./config-local/ node-debug --hidden node_modules/ --hidden bower_components/ --hidden test/ --no-preload energyreports.js'
-
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
 alias bashrc='vi $HOME/.bash_profile'
