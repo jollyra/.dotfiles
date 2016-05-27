@@ -89,20 +89,9 @@ nnoremap <cr> :w<cr>
 
 nnoremap Y y$
 
-" Grunt commands
-noremap <Leader>grd :!grunt dist<CR><CR>
-noremap <Leader>grl :!grunt lint<CR>
-noremap <Leader>grt :!grunt test<CR>
-
 " Git
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
-
-" Work environment shortcuts
-map <leader>com :%s/\.biz/\.com/g<CR>
-map <leader>biz :%s/\.com/\.biz/g<CR>
-map <leader>us :%s/ca\./us\./g<CR>
-map <leader>ca :%s/us\./ca\./g<CR>
 
 " Search for current word in Silver Searcher
 nnoremap <leader>K :Ag<cr>
@@ -131,10 +120,5 @@ let g:ctrlp_max_files = 100000  " larger than default so I can seach from dev di
 "Dash
 nmap <silent> <leader>d <Plug>DashSearch
 
-"Sonictemplate custom template dir
-let g:sonictemplate_vim_template_dir = '$HOME/repos/code-templates'
-
 "Ensure EditorConfig works well with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-
