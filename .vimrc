@@ -8,8 +8,6 @@ call vundle#begin()
 Plugin 'VunleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
@@ -95,17 +93,6 @@ noremap <Leader>gd :Gvdiff<CR>
 
 " Search for current word in Silver Searcher
 nnoremap <leader>K :Ag<cr>
-
-"Vim-airline
-let g:airline_theme='powerlineish'
-set laststatus=2
-let g:airline_theme='badwolf'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:Powerline_symbols = 'fancy'
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-set ttimeoutlen=50
 
 "ctrlP
 let g:ctrlp_lazy_update = 1         "don't update match window until typing stops
