@@ -1,6 +1,11 @@
+export PATH=/usr/local/bin:$PATH 
+
+export PATH=$HOME/.npm/bin:$PATH
 export PATH=~/.npm/bin:./node_modules/.bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
-export PATH=/usr/local/bin:$PATH
+
+# Uncomment this if things go south
+#export PATH=/usr/local/bin:/Users/nigel.rahkola/.npm/bin:./node_modules/.bin:/Users/nigel.rahkola/.npm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Git branch in prompt.
 parse_git_branch() {
@@ -34,5 +39,7 @@ ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
 agq () { ag --color --before=2 --after=4 --literal --ignore=*.csv "$@" | less -SRi; }
 agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
 
-export NVM_DIR="/Users/nigel.rahkola/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Work
+alias nbg='NODE_ENV=dbg NODE_CONFIG_DIR=./config-local node'
+alias nca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
+alias nus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
