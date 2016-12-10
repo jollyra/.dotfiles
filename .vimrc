@@ -16,7 +16,6 @@ Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -68,10 +67,6 @@ set t_Co=256
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
-
-" Explore file like a sir
-map <leader>e :NERDTreeToggle<CR>
-let NERDTreeWinSize=50
 
 " Buffer Helpers
 map <leader>b :buffers<CR>:buffer<space>
