@@ -25,6 +25,7 @@ alias gflogs="git log --follow --oneline --" # supply filename
 
 # Convenience
 alias vimrc='vi $HOME/.vimrc'
+alias v="mvim"
 alias bashrc='vi $HOME/.bash_profile'
 alias ll='ls -al'
 alias ..='cd ..'
