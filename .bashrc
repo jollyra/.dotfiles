@@ -30,6 +30,8 @@ alias bashrc='vi $HOME/.bash_profile'
 alias ll='ls -al'
 alias ..='cd ..'
 alias ....='cd ../..'
+alias octave="/usr/local/octave/3.8.0/bin/octave-3.8.0"
+
 
 # Commit dotfiles changes from anywhere
 alias dotfilesup="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
