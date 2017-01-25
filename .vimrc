@@ -16,6 +16,7 @@ Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'mattn/sonictemplate-vim.git'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jelera/vim-javascript-syntax'  " better javascript syntax
 
 call vundle#end()
 filetype plugin indent on
@@ -68,17 +69,20 @@ colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 
-" Buffer Helpers
+" Buffers
 map <leader>b :buffers<CR>:buffer<space>
 map <leader>l :bnext<CR>
 map <leader>h :bprev<CR>
+
+" Marks
+map <leader>m :marks<CR>:'
 
 " Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
 
-" Enter saves file
-nnoremap <cr> :w<cr>
+" Enter saves file and clears highlighting
+nnoremap <cr> :w<cr>:noh<cr>
 
 nnoremap Y y$
 
@@ -104,3 +108,15 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 "Ensure EditorConfig works well with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+"
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['jshint']

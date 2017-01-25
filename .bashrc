@@ -1,8 +1,8 @@
-export PATH=/usr/local/bin:$PATH 
-
+export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=~/.npm/bin:./node_modules/.bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
+export PATH=/usr/local/sbin:$PATH
 
 # Uncomment this if things go south
 #export PATH=/usr/local/bin:/Users/nigel.rahkola/.npm/bin:./node_modules/.bin:/Users/nigel.rahkola/.npm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
