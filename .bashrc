@@ -46,3 +46,9 @@ agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten mer
 alias nbg='NODE_ENV=dbg NODE_CONFIG_DIR=./config-local node'
 alias nca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
 alias nus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
+
+# Mitch's chef aliases
+kc='chef exec kitchen converge -c 2'
+kd='chef exec kitchen destroy'
+kg='chef exec kitchen login'
+kl='chef exec kitchen list'
