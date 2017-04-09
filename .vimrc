@@ -14,9 +14,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'rking/ag.vim'
 Plugin 'rizzatti/dash.vim'
-Plugin 'mattn/sonictemplate-vim.git'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'  " better javascript syntax
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -120,3 +120,19 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers = ['jshint']
+
+" Writing
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  map j gj
+  map k gk
+  setlocal spell spelllang=en_us
+  set complete+=s
+  set formatprg=par
+  setlocal wrap
+  setlocal linebreak
+  colorscheme solarized
+  set background=light
+endfu
+com! WP call WordProcessorMode()
