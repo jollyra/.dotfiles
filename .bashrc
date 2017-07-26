@@ -1,8 +1,11 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=~/.npm/bin:./node_modules/.bin:$PATH
+export PATH=~/Library/Python/3.6/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
 export PATH=/usr/local/sbin:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export SFTP_HOST=localhost
 
 # Uncomment this if things go south
 #export PATH=/usr/local/bin:/Users/nigel.rahkola/.npm/bin:./node_modules/.bin:/Users/nigel.rahkola/.npm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -52,3 +55,12 @@ kc='chef exec kitchen converge -c 2'
 kd='chef exec kitchen destroy'
 kg='chef exec kitchen login'
 kl='chef exec kitchen list'
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+# Initialize rbenv
+eval "$(rbenv init -)"
+
+PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
+
+# brew install bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
