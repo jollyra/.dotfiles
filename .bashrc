@@ -7,9 +7,6 @@ export PATH=/usr/local/sbin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export SFTP_HOST=localhost
 
-# Uncomment this if things go south
-#export PATH=/usr/local/bin:/Users/nigel.rahkola/.npm/bin:./node_modules/.bin:/Users/nigel.rahkola/.npm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 # Git branch in prompt.
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -35,7 +32,6 @@ alias ..='cd ..'
 alias ....='cd ../..'
 alias octave="/usr/local/octave/3.8.0/bin/octave-3.8.0"
 
-
 # Commit dotfiles changes from anywhere
 alias dotfilesup="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
 
@@ -50,11 +46,6 @@ alias nbg='NODE_ENV=dbg NODE_CONFIG_DIR=./config-local node'
 alias nca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
 alias nus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
 
-# Mitch's chef aliases
-kc='chef exec kitchen converge -c 2'
-kd='chef exec kitchen destroy'
-kg='chef exec kitchen login'
-kl='chef exec kitchen list'
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # Initialize rbenv
