@@ -86,10 +86,6 @@ nnoremap <cr> :w<cr>:noh<cr>
 
 nnoremap Y y$
 
-" Git
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-
 " Search for current word in Silver Searcher
 nnoremap <leader>K :Ag<cr>
 
@@ -120,19 +116,3 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers = ['jshint']
-
-" Writing
-func! WordProcessorMode()
-  setlocal formatoptions=1
-  setlocal noexpandtab
-  map j gj
-  map k gk
-  setlocal spell spelllang=en_us
-  set complete+=s
-  set formatprg=par
-  setlocal wrap
-  setlocal linebreak
-  colorscheme solarized
-  set background=light
-endfu
-com! WP call WordProcessorMode()
