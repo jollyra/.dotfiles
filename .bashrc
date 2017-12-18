@@ -6,6 +6,7 @@ export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
 export PATH=/usr/local/sbin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export SFTP_HOST=localhost
+export PYTHONPATH=$PYTHONPATH:$HOME/mydev/util/
 
 # Git branch in prompt.
 parse_git_branch() {
