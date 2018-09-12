@@ -2,11 +2,12 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=~/.npm/bin:./node_modules/.bin:$PATH
 export PATH=~/Library/Python/3.6/bin:$PATH
-export NODE_PATH=/usr/local/lib/node_modules:~/.npm/lib/node_modules
 export PATH=/usr/local/sbin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export SFTP_HOST=localhost
 export PYTHONPATH=$PYTHONPATH:$HOME/mydev/util/
+
+# Go
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
 
 # Git branch in prompt.
 parse_git_branch() {
@@ -41,16 +42,6 @@ agl () { ag --color --after=4 "$@" | less -SRi; }
 ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
 agq () { ag --color --before=2 --after=4 --literal --ignore=*.csv "$@" | less -SRi; }
 agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
-
-# Work
-alias nbg='NODE_ENV=dbg NODE_CONFIG_DIR=./config-local node'
-alias nca='NODE_ENV=dca NODE_CONFIG_DIR=./config-local node'
-alias nus='NODE_ENV=dus NODE_CONFIG_DIR=./config-local node'
-
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-
-# Initialize rbenv
-eval "$(rbenv init -)"
 
 PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 
