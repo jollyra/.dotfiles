@@ -1,6 +1,6 @@
 [user]
 	name = Nigel Rahkola
-	email = me@nigelrahkola.com
+	email = nrahkola@league.com
 [pull]
 	rebase = true
 [color]
@@ -12,7 +12,7 @@
 [alias]
 	stashes = stash list
 	branches = branch -a
-  aliases = !git config -l | grep alias | cut -c 7-
+	aliases = !git config -l | grep alias | cut -c 7-
 	unstage = reset -q HEAD --
 	discard = checkout --
 	uncommit = reset --mixed HEAD~
