@@ -1,20 +1,8 @@
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.npm/bin:$PATH
-export PATH=~/.npm/bin:./node_modules/.bin:$PATH
-export PATH=~/Library/Python/3.6/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PYTHONPATH=$PYTHONPATH:$HOME/mydev/util/
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Go
 export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
-
-# Git branch in prompt.
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-# export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
-export PS1="\u:\W\033[32m\]\$(parse_git_branch)\[\033[00m\] > "
+export GOPATH=$HOME/league/services
 
 # Git aliases
 alias gs="git status --branch"
@@ -26,24 +14,16 @@ alias gsp="git stash; git pull; git stash apply"
 alias gflogs="git log --follow --oneline --" # supply filename
 
 # Convenience
-alias vimrc='vi $HOME/.vimrc'
-alias v="mvim"
-alias bashrc='vi $HOME/.bash_profile'
 alias ll='ls -al'
 alias ..='cd ..'
 alias ....='cd ../..'
-alias octave="/usr/local/octave/3.8.0/bin/octave-3.8.0"
 
-# Commit dotfiles changes from anywhere
-alias dotfilesup="git -C $HOME/dotfiles/ commit -av; git -C $HOME/dotfiles/ push"
-
-# Silver Searcher aliases
-agl () { ag --color --after=4 "$@" | less -SRi; }
-ags () { ag --color --after=4 --smart-case "$@" | less -SRi; }
-agq () { ag --color --before=2 --after=4 --literal --ignore=*.csv "$@" | less -SRi; }
-agm () { ag --color --after=20 --literal "<<<<<<<" | less -SRi; } #Forgotten merge conflicts
-
-PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
+# Kubernetes
+alias k="kubectl"
+alias clusterstaging='gcloud container clusters get-credentials league-cluster --region northamerica-northeast1 --project league-stage-ca'
+alias clusterprod='gcloud container clusters get-credentials league-cluster --region northamerica-northeast1 --project league-prod-ca'
+alias projectprod='gcloud config set project league-prod-ca'
+alias projectstaging='gcloud config set project league-stage-ca '
 
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
@@ -52,3 +32,15 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook bash)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nrahkola/google-cloud-sdk/path.bash.inc' ]; then . '/Users/nrahkola/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nrahkola/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/nrahkola/google-cloud-sdk/completion.bash.inc'; fi
