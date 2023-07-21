@@ -11,9 +11,6 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'tomasr/molokai'
-Plugin 'rking/ag.vim'
-Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'  " better javascript syntax
 Plugin 'altercation/vim-colors-solarized'
@@ -51,8 +48,6 @@ set incsearch                                      " jump to matches when enteri
 set hlsearch                                       " highlight searches
 set gdefault                                       " Search globally by default`
 
-autocmd FileType haskell setl tabstop=8 softtabstop=4 shiftwidth=4 expandtab shiftround
-
 " Disable Ex mode
 nnoremap Q <Nop>
 
@@ -62,12 +57,6 @@ imap jk <Esc>
 " Show nice tabs
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
-
-" Styling
-set t_Co=256
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
 
 " Buffers
 map <leader>b :buffers<CR>:buffer<space>
@@ -86,9 +75,6 @@ nnoremap <cr> :w<cr>:noh<cr>
 
 nnoremap Y y$
 
-" Search for current word in Silver Searcher
-nnoremap <leader>K :Ag<cr>
-
 "ctrlP
 let g:ctrlp_lazy_update = 1         "don't update match window until typing stops
 let g:ctrlp_clear_cache_on_exit = 1 "enable cross-session caching by not deleting cache files
@@ -98,9 +84,6 @@ set wildignore+=*.css               " css files are all generated from less file
 let g:ctrlp_working_path_mode = 'wr' " now I can search for files from dev dir instead of project root
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25'
 let g:ctrlp_max_files = 100000  " larger than default so I can seach from dev dir
-
-"Dash
-nmap <silent> <leader>d <Plug>DashSearch
 
 "Ensure EditorConfig works well with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']

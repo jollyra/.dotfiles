@@ -1,8 +1,7 @@
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Go
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$HOME/league/services
+export PATH=$PATH:$(go env GOPATH)/bin:$GOPATH
 
 # Git aliases
 alias gs="git status --branch"
@@ -18,13 +17,6 @@ alias ll='ls -al'
 alias ..='cd ..'
 alias ....='cd ../..'
 
-# Kubernetes
-alias k="kubectl"
-alias clusterstaging='gcloud container clusters get-credentials league-cluster --region northamerica-northeast1 --project league-stage-ca'
-alias clusterprod='gcloud container clusters get-credentials league-cluster --region northamerica-northeast1 --project league-prod-ca'
-alias projectprod='gcloud config set project league-prod-ca'
-alias projectstaging='gcloud config set project league-stage-ca '
-
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 export PYENV_ROOT="$HOME/.pyenv"
@@ -33,14 +25,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-eval "$(direnv hook bash)"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nrahkola/google-cloud-sdk/path.bash.inc' ]; then . '/Users/nrahkola/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/nrahkola/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/nrahkola/google-cloud-sdk/completion.bash.inc'; fi
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
